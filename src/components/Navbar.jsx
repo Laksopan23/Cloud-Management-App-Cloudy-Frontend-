@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import cloudy from "../assets/cloudy.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -13,7 +14,14 @@ const Navbar = () => {
     <div className="w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg">
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <h1 className="text-3xl font-bold mr-4 sm:text-4xl">BRAND.</h1>
+          <div className="flex items-center">
+            <img
+              src={cloudy}
+              alt="Cloudy Logo"
+              className="h-12 sm:h-16 md:h-12 lg:h-16 w-auto"
+            />
+          </div>
+
           <ul className="hidden md:flex space-x-4">
             <li>
               <Link
