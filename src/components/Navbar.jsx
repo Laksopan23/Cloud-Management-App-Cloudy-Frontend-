@@ -80,23 +80,16 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:flex pr-4 space-x-4">
-          <button className="border-none bg-transparent text-black hover:text-indigo-600 cursor-pointer">
+        <div className="hidden md:flex pr-4">
+          <button className="border-none bg-transparent text-black mr-4">
             Sign In
           </button>
-          <button className="px-8 py-3 bg-indigo-600 text-white hover:bg-indigo-700 cursor-pointer">
-            Sign Up
-          </button>
+          <button className="px-8 py-3">Sign Up</button>
         </div>
         <div className="md:hidden mr-4" onClick={handleClick}>
-          {!nav ? (
-            <MenuIcon className="w-5 cursor-pointer" />
-          ) : (
-            <XIcon className="w-5 cursor-pointer" />
-          )}
+          {!nav ? <MenuIcon className="w-5" /> : <XIcon className="w-5" />}
         </div>
       </div>
-
       <ul
         className={
           !nav ? "hidden" : "absolute bg-zinc-200 w-full px-8 space-y-4"
